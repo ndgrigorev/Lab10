@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab10_Library
 {
-    public class Mammals : Animals, IInit
+    public class Mammals : Animals, IInit, IComparable, ICloneable
     {
         protected double weight;
 
@@ -31,7 +31,7 @@ namespace Lab10_Library
             Weight = 1;
         }
 
-        public Mammals(int id, string name, string gender, int age, float weight) : base(id, name, gender, age)
+        public Mammals(int id, string name, string gender, int age, double weight) : base(id, name, gender, age)
         {
             Weight = weight;
         }
@@ -75,6 +75,10 @@ namespace Lab10_Library
             {
                 return false;
             }
+        }
+        public override object Clone()
+        {
+            return new Mammals(Id.Number, Name, Gender, Age, Weight);
         }
     }
 }

@@ -233,7 +233,7 @@ namespace Lab10_Library
             }
         }
 
-        public object Clone()
+        public virtual object Clone()
         {
             return new Animals(Id.Number, Name, Gender, Age);
         }

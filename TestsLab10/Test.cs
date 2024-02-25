@@ -161,5 +161,35 @@ namespace TestsLab10
             Assert.AreEqual(expected[2], actual[2]);
             Assert.AreEqual(expected[3], actual[3]);
         }
+        [TestMethod]
+        public void TestMethod14()
+        {
+            //Arrange
+            Mammals expected = new Mammals();
+            //Act
+            Mammals actual = (Mammals)expected.Clone();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void TestMethod15()
+        {
+            //Arrange
+            Cats expected = new Cats();
+            //Act
+            Cats actual = (Cats)expected.Clone();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void TestMethod16()
+        {
+            //Arrange
+            Fishes expected = new Fishes();
+            //Act
+            Fishes actual = (Fishes)expected.Clone();
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

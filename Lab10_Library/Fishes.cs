@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab10_Library
 {
-    public class Fishes : Animals, IInit
+    public class Fishes : Animals, IInit, IComparable, ICloneable
     {
         protected string typeOfFish;
         protected int numberOfFins;
@@ -87,6 +87,10 @@ namespace Lab10_Library
             {
                 return false;
             }
+        }
+        public override object Clone()
+        {
+            return new Fishes(Id.Number, Name, Gender, Age, TypeOfFish, NumberOfFins);
         }
     }
 }

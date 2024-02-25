@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab10_Library
 {
-    public class Cats : Mammals, IInit
+    public class Cats : Mammals, IInit, IComparable, ICloneable
     {
         protected string breed;
         protected string color;
@@ -37,7 +37,7 @@ namespace Lab10_Library
             TailLength = 0.3;
         }
 
-        public Cats(int id, string name, string gender, int age, float weight, string breed, string color, double tailLength) : base(id, name, gender, age, weight)
+        public Cats(int id, string name, string gender, int age, double weight, string breed, string color, double tailLength) : base(id, name, gender, age, weight)
         {
             Breed = breed;
             Color = color;
@@ -96,6 +96,10 @@ namespace Lab10_Library
             {
                 return false;
             }
+        }
+        public override object Clone()
+        {
+            return new Cats(Id.Number, Name, Gender, Age, Weight, Breed, Color, TailLength);
         }
     }
 }
