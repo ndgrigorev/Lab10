@@ -94,6 +94,10 @@ namespace Lab10_Library
         {
             Console.WriteLine($"Животное: имя: {Name}, пол:{Gender}, возраст: {Age} лет");
         }
+        public void ShowNotVirtual()
+        {
+            Console.WriteLine($"Животное: имя: {Name}, пол:{Gender}, возраст: {Age} лет");
+        }
         protected string Input(string output)
         {
             Console.WriteLine($"Введите {output} (введите -1, если не хотите менять текущее значение)");

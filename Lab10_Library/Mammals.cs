@@ -41,6 +41,11 @@ namespace Lab10_Library
             Console.WriteLine($"Млекопитающее: имя: {Name}, пол:{Gender}, возраст: {Age} лет, вес: {Weight} кг.");
         }
 
+        public new void ShowNotVirtual()
+        {
+            Console.WriteLine($"Млекопитающее: имя: {Name}, пол:{Gender}, возраст: {Age} лет, вес: {Weight} кг.");
+        }
+
         public override void Init()
         {
             base.Init();

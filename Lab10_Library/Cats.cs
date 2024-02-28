@@ -47,6 +47,10 @@ namespace Lab10_Library
         {
             Console.WriteLine($"Кошка: имя: {Name}, пол:{Gender}, возраст: {Age} лет, вес: {Weight} кг., порода: {Breed}, окрас: {Color}, длина хвоста: {TailLength} м.");
         }
+        public new void ShowNotVirtual()
+        {
+            Console.WriteLine($"Кошка: имя: {Name}, пол:{Gender}, возраст: {Age} лет, вес: {Weight} кг., порода: {Breed}, окрас: {Color}, длина хвоста: {TailLength} м.");
+        }
         public override string ToString()
         {
             return $"Кошка: имя: {Name}, пол:{Gender}, возраст: {Age} лет, вес: {Weight} кг., порода: {Breed}, окрас: {Color}, длина хвоста: {TailLength} м.";

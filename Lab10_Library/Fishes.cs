@@ -41,6 +41,10 @@ namespace Lab10_Library
         {
             Console.WriteLine($"Рыба: имя: {Name}, пол:{Gender}, возраст: {Age} лет, тип рыбы: {TypeOfFish}, кол-во плавников: {NumberOfFins}");
         }
+        public new void ShowNotVirtual()
+        {
+            Console.WriteLine($"Рыба: имя: {Name}, пол:{Gender}, возраст: {Age} лет, тип рыбы: {TypeOfFish}, кол-во плавников: {NumberOfFins}");
+        }
         public override string ToString()
         {
             return $"Рыба: имя: {Name}, пол:{Gender}, возраст: {Age} лет, тип рыбы: {TypeOfFish}, кол-во плавников: {NumberOfFins}";
